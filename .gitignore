@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# personal planning docs (not for the public repo)
+/plan1.md
+/tasks.md
