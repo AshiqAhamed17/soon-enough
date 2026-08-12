@@ -27,7 +27,7 @@ Design spec: `docs/superpowers/specs/2026-08-11-soon-enough-design.md`
 
 # Phase 0 — Foundation
 
-## Task 0.1: Scaffold the Next.js project
+### Task 1: Scaffold the Next.js project
 
 **Files:**
 - Create: entire Next.js project scaffold at repo root (package.json, tsconfig.json, next.config.ts, eslint config, app/, public/, globals.css, etc.)
@@ -67,7 +67,7 @@ git commit -m "chore: scaffold Next.js 15 project with TypeScript, Tailwind, ESL
 
 ---
 
-## Task 0.2: Design tokens (colors, fonts)
+### Task 2: Design tokens (colors, fonts)
 
 **Files:**
 - Modify: `app/globals.css`
@@ -138,7 +138,7 @@ git commit -m "feat: add warm neutral design tokens to Tailwind theme"
 
 ---
 
-## Task 0.3: Navigation and coming-soon stub pages
+### Task 3: Navigation and coming-soon stub pages
 
 **Files:**
 - Create: `components/coming-soon.tsx`
@@ -291,7 +291,7 @@ git commit -m "feat: add site navigation and coming-soon stub pages"
 
 ---
 
-## Task 0.4: Footer
+### Task 4: Footer
 
 **Files:**
 - Create: `components/footer.tsx`
@@ -321,7 +321,7 @@ git commit -m "feat: add footer with signature line"
 
 ---
 
-## Task 0.5: Wire navigation and footer into the root layout
+### Task 5: Wire navigation and footer into the root layout
 
 **Files:**
 - Modify: `app/layout.tsx`
@@ -379,7 +379,7 @@ git commit -m "feat: wire navigation and footer into root layout"
 
 ---
 
-## Task 0.6: Deploy skeleton to Vercel *(manual — user-run, not agent-executed)*
+### Manual Step: Deploy skeleton to Vercel *(user-run, not agent-executed — not part of the numbered task sequence)*
 
 Deploying creates a live, shared, external resource, so this step is for the user to run directly rather than something an agent runs autonomously.
 
@@ -391,7 +391,7 @@ Deploying creates a live, shared, external resource, so this step is for the use
 
 # Phase 1 — Homepage
 
-## Task 1.1: Life stats data model
+### Task 6: Life stats data model
 
 **Files:**
 - Create: `types/stat.ts`
@@ -440,7 +440,7 @@ git commit -m "feat: add life stats data model"
 
 ---
 
-## Task 1.2: Quotes data model
+### Task 7: Quotes data model
 
 **Files:**
 - Create: `types/quote.ts`
@@ -483,7 +483,7 @@ git commit -m "feat: add quotes data"
 
 ---
 
-## Task 1.3: Homepage hero
+### Task 8: Homepage hero
 
 **Files:**
 - Create: `public/images/home/hero.jpg` (downloaded)
@@ -596,7 +596,7 @@ git commit -m "feat: add cinematic homepage hero"
 
 ---
 
-## Task 1.4: Life stats strip
+### Task 9: Life stats strip
 
 **Files:**
 - Create: `components/life-stats.tsx`
@@ -670,9 +670,9 @@ git commit -m "feat: add life stats strip to homepage"
 
 ---
 
-## Task 1.5: Featured memories preview (self-contained placeholder)
+### Task 10: Featured memories preview (self-contained placeholder)
 
-This section is intentionally self-contained with inline placeholder content — it gets rewired to real café data in Task 2.6, once café data exists.
+This section is intentionally self-contained with inline placeholder content — it gets rewired to real café data in Task 17, once café data exists.
 
 **Files:**
 - Create: `public/images/home/featured-1.jpg`, `featured-2.jpg`, `featured-3.jpg` (downloaded)
@@ -808,7 +808,7 @@ git commit -m "feat: add featured memories preview section to homepage"
 
 ---
 
-## Task 1.6: Quote banner and final homepage assembly
+### Task 11: Quote banner and final homepage assembly
 
 **Files:**
 - Create: `components/quote-banner.tsx`
@@ -877,7 +877,7 @@ git commit -m "feat: assemble homepage sections with quote banner"
 
 # Phase 2 — Cafés (the template)
 
-## Task 2.1: Café type definition
+### Task 12: Café type definition
 
 **Files:**
 - Create: `types/cafe.ts`
@@ -926,7 +926,7 @@ git commit -m "feat: add Cafe type definition"
 
 ---
 
-## Task 2.2: Placeholder café data and photography
+### Task 13: Placeholder café data and photography
 
 **Files:**
 - Create: `data/cafes.ts`
@@ -1135,7 +1135,7 @@ git commit -m "feat: add placeholder café data with curated photography"
 
 ---
 
-## Task 2.3: Café card and list page
+### Task 14: Café card and list page
 
 **Files:**
 - Create: `components/cafe-card.tsx`
@@ -1216,7 +1216,7 @@ git commit -m "feat: add café list page with large cards"
 
 ---
 
-## Task 2.4: Café memory-page — hero and snapshot
+### Task 15: Café memory-page — hero and snapshot
 
 **Files:**
 - Create: `app/cafes/[slug]/page.tsx`
@@ -1330,7 +1330,7 @@ git commit -m "feat: add café memory-page hero and snapshot sections"
 
 ---
 
-## Task 2.5: Café memory-page — gallery, story, and future-me
+### Task 16: Café memory-page — gallery, story, and future-me
 
 **Files:**
 - Create: `components/cafe-gallery.tsx`
@@ -1466,7 +1466,7 @@ git commit -m "feat: complete café memory-page template with story and future-m
 
 ---
 
-## Task 2.6: Wire homepage featured memories to real café data
+### Task 17: Wire homepage featured memories to real café data
 
 **Files:**
 - Modify: `components/featured-memories.tsx`
