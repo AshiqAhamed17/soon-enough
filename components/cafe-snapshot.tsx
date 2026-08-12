@@ -1,9 +1,10 @@
 import type { Cafe } from "@/types/cafe";
 
 export function CafeSnapshot({ cafe }: { cafe: Cafe }) {
+  const visitedLabel = new Date(cafe.visitDate).toLocaleDateString("en-US", { month: "long", year: "numeric" });
   const rows: [string, string][] = [
     ["Location", cafe.location],
-    ["Visited", cafe.visitDate],
+    ["Visited", visitedLabel],
     ["Weather", cafe.weather],
     ["Mood", cafe.mood],
     ["Music", cafe.music],
