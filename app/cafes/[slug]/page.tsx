@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import { cafes } from "@/data/cafes";
 import { CafeHero } from "@/components/cafe-hero";
 import { CafeSnapshot } from "@/components/cafe-snapshot";
+import { CafeGallery } from "@/components/cafe-gallery";
+import { CafeStory } from "@/components/cafe-story";
+import { CafeFutureMe } from "@/components/cafe-future-me";
 
 export function generateStaticParams() {
   return cafes.map((cafe) => ({ slug: cafe.slug }));
@@ -20,6 +23,9 @@ export default async function CafePage({
     <div>
       <CafeHero cafe={cafe} />
       <CafeSnapshot cafe={cafe} />
+      <CafeGallery cafe={cafe} />
+      <CafeStory cafe={cafe} />
+      <CafeFutureMe cafe={cafe} />
     </div>
   );
 }
