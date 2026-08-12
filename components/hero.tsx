@@ -29,7 +29,7 @@ export function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="max-w-3xl text-4xl font-medium text-white md:text-6xl"
         >
           Collecting places. Chasing memories. Becoming who I&apos;m meant to be.
@@ -37,7 +37,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           className="mt-6 max-w-xl text-base text-white/80 md:text-lg"
         >
           A quiet record of the cafés, cities, and streets that shaped me.
