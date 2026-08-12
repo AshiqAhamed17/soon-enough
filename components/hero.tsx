@@ -19,7 +19,7 @@ export function Hero() {
           src="/images/home/hero.jpg"
           alt="A quiet street somewhere worth remembering"
           fill
-          priority
+          preload
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30" />
