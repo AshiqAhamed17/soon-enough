@@ -1,0 +1,113 @@
+import type { Cafe } from "@/types/cafe";
+
+export const cafes: Cafe[] = [
+  {
+    slug: "ozone-coffee-london",
+    name: "Ozone Coffee",
+    city: "London",
+    country: "United Kingdom",
+    heroImage: "/images/cafes/ozone-coffee-london/hero.jpg",
+    gallery: [
+      "/images/cafes/ozone-coffee-london/gallery-1.jpg",
+      "/images/cafes/ozone-coffee-london/gallery-2.jpg",
+    ],
+    location: "Old Street, London",
+    visitDate: "2024-03-14",
+    favouriteDrink: "Flat white",
+    companions: "Alone, with a notebook",
+    music: "Low-fi jazz from the speakers behind the counter",
+    weather: "Grey and drizzling, the kind that makes you want to stay inside",
+    mood: "Restless, then calm",
+    story:
+      "I walked in soaking from the rain, ordered a flat white, and ended up staying three hours. Nobody rushed me. I wrote four pages I still reread sometimes.",
+    lesson: "Some of the best thinking happens when you stop trying to leave.",
+    whyItMatters:
+      "It was the first café abroad where I felt like a local instead of a tourist — just another person with a laptop and nowhere urgent to be.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "I started carrying a notebook everywhere after this.",
+    },
+  },
+  {
+    slug: "kurasu-kyoto",
+    name: "Kurasu",
+    city: "Kyoto",
+    country: "Japan",
+    heroImage: "/images/cafes/kurasu-kyoto/hero.jpg",
+    gallery: [
+      "/images/cafes/kurasu-kyoto/gallery-1.jpg",
+      "/images/cafes/kurasu-kyoto/gallery-2.jpg",
+    ],
+    location: "Near Kyoto University",
+    visitDate: "2024-11-02",
+    favouriteDrink: "Hand-poured single origin, Ethiopian",
+    companions: "A close friend from university",
+    music: "Almost silence — just the pour-over kettle",
+    weather: "Cool autumn morning, leaves turning",
+    mood: "Quietly happy",
+    story:
+      "We didn't talk much. We just sat by the window watching the street, drinking coffee that took ten minutes to make on purpose. It felt like the opposite of everything back home.",
+    lesson: "Slowness is not wasted time.",
+    whyItMatters: "This is the café that taught me coffee could be a ritual, not just a habit.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "I bought a pour-over set the week I got home.",
+    },
+  },
+  {
+    slug: "la-cafeotheque-paris",
+    name: "La Caféothèque",
+    city: "Paris",
+    country: "France",
+    heroImage: "/images/cafes/la-cafeotheque-paris/hero.jpg",
+    gallery: [
+      "/images/cafes/la-cafeotheque-paris/gallery-1.jpg",
+      "/images/cafes/la-cafeotheque-paris/gallery-2.jpg",
+    ],
+    location: "Le Marais, Paris",
+    visitDate: "2023-06-21",
+    favouriteDrink: "Cortado",
+    companions: "My sister, mid-argument that dissolved into laughter",
+    music: "French radio, barely audible over conversation",
+    weather: "Warm evening light through old windows",
+    mood: "Nostalgic before the moment had even ended",
+    story:
+      "We'd been mid-disagreement about something neither of us remembers now. Somewhere between the first and second cortado, we forgot why we were annoyed and just talked for two hours.",
+    lesson: "Most arguments don't survive good coffee and good light.",
+    whyItMatters: "It's the place I think of whenever someone asks about my sister.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "Nothing dramatic — just a softer memory of that trip.",
+    },
+  },
+  {
+    slug: "tobys-estate-sydney",
+    name: "Toby's Estate",
+    city: "Sydney",
+    country: "Australia",
+    heroImage: "/images/cafes/tobys-estate-sydney/hero.jpg",
+    gallery: [
+      "/images/cafes/tobys-estate-sydney/gallery-1.jpg",
+      "/images/cafes/tobys-estate-sydney/gallery-2.jpg",
+    ],
+    location: "Chippendale, Sydney",
+    visitDate: "2025-01-09",
+    favouriteDrink: "Iced long black",
+    companions: "A friend I hadn't seen in six years",
+    music: "Nothing — just the espresso machine and traffic outside",
+    weather: "Bright, hot, that particular Sydney summer light",
+    mood: "Surprised by how easy it was to pick back up",
+    story:
+      "Six years apart and it took about four minutes before it felt like no time had passed at all. We sat outside until the ice in our coffees melted completely.",
+    lesson: "The right friendships don't need maintenance, just a good chair to sit in.",
+    whyItMatters: "It reminded me that distance doesn't have to mean losing people.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "I started reaching out first, more often.",
+    },
+  },
+];
