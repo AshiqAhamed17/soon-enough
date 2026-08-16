@@ -1,19 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { cafes } from "@/data/cafes";
-import { restaurants } from "@/data/restaurants";
-import { places } from "@/data/places";
+import { getAllMemories, type Memory } from "@/lib/memories";
 
 const TILTS = ["mount-tilt-1", "mount-tilt-2", "mount-tilt-3", "mount-tilt-4"];
-
-interface Memory {
-  href: string;
-  name: string;
-  city: string;
-  country: string;
-  heroImage: string;
-  visitDate: string;
-}
 
 function MemoryCard({
   memory,
@@ -47,37 +36,7 @@ function MemoryCard({
 }
 
 export function FeaturedMemories() {
-  const allMemories: Memory[] = [
-    ...cafes.map((cafe) => ({
-      href: `/cafes/${cafe.slug}`,
-      name: cafe.name,
-      city: cafe.city,
-      country: cafe.country,
-      heroImage: cafe.heroImage,
-      visitDate: cafe.visitDate,
-    })),
-    ...restaurants.map((restaurant) => ({
-      href: `/restaurants/${restaurant.slug}`,
-      name: restaurant.name,
-      city: restaurant.city,
-      country: restaurant.country,
-      heroImage: restaurant.heroImage,
-      visitDate: restaurant.visitDate,
-    })),
-    ...places.map((place) => ({
-      href: `/places/${place.slug}`,
-      name: place.name,
-      city: place.city,
-      country: place.country,
-      heroImage: place.heroImage,
-      visitDate: place.visitDate,
-    })),
-  ];
-
-  const featured = allMemories
-    .sort((a, b) => (a.visitDate < b.visitDate ? 1 : -1))
-    .slice(0, 3);
-
+  const featured = getAllMemories().slice(0, 3);
   const [lead, ...rest] = featured;
 
   return (
