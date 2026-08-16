@@ -1,18 +1,42 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function ComingSoon({ title }: { title: string }) {
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 px-6 text-center">
-      <p className="text-sm uppercase tracking-widest text-text-secondary">{title}</p>
-      <h1 className="max-w-xl text-3xl font-medium text-text md:text-4xl">
+    <div className="flex min-h-[70vh] flex-col items-center justify-center gap-4 px-6 text-center">
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="font-mono text-xs uppercase tracking-[0.3em] text-text-secondary/70"
+      >
+        {title}
+      </motion.p>
+      <motion.h1
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+        className="max-w-xl text-3xl font-semibold text-text md:text-4xl"
+      >
         This chapter hasn&apos;t been written yet.
-      </h1>
-      <p className="text-text-secondary">Soon enough.</p>
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+        className="italic text-text-secondary"
+      >
+        Soon enough.
+      </motion.p>
       <Link
         href="/"
-        className="mt-4 text-sm text-accent underline-offset-4 hover:underline"
+        className="group mt-4 font-mono text-xs uppercase tracking-[0.15em] text-accent"
       >
-        Back home
+        <span className="border-b border-accent/40 pb-0.5 transition-colors group-hover:border-accent">
+          Back home
+        </span>
       </Link>
     </div>
   );

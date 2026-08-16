@@ -26,22 +26,43 @@ export function Hero() {
       </motion.div>
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="max-w-3xl text-4xl font-medium text-white md:text-6xl"
+          className="mb-6 font-mono text-xs uppercase tracking-[0.35em] text-white/70"
+        >
+          Soon Enough
+        </motion.p>
+        <motion.h1
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
+          className="max-w-4xl text-[2.75rem] font-semibold leading-[1.02] tracking-tight text-white sm:text-6xl md:text-7xl"
         >
           Collecting places. Chasing memories. Becoming who I&apos;m meant to be.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          className="mt-6 max-w-xl text-base text-white/80 md:text-lg"
+          transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
+          className="mt-7 max-w-xl text-base text-white/80 md:text-lg"
         >
           A quiet record of the cafés, cities, and streets that shaped me.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        >
+          <motion.span
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+            className="block h-8 w-px bg-white/50"
+          />
+        </motion.div>
       </div>
     </div>
   );

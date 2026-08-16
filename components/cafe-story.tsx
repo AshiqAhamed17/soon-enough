@@ -1,20 +1,36 @@
+"use client";
+
+import { motion } from "framer-motion";
 import type { Cafe } from "@/types/cafe";
 
 export function CafeStory({ cafe }: { cafe: Cafe }) {
   return (
-    <section className="mx-auto max-w-2xl px-6 py-16">
-      <h2 className="text-sm uppercase tracking-widest text-text-secondary">
+    <motion.section
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="mx-auto max-w-2xl px-6 py-16"
+    >
+      <p className="font-mono text-xs uppercase tracking-[0.3em] text-text-secondary/70">
         Why this place matters
-      </h2>
+      </p>
       <p className="mt-4 text-lg leading-relaxed text-text">{cafe.whyItMatters}</p>
 
-      <h2 className="mt-12 text-sm uppercase tracking-widest text-text-secondary">
+      <p className="mt-12 font-mono text-xs uppercase tracking-[0.3em] text-text-secondary/70">
         The story
-      </h2>
+      </p>
       <p className="mt-4 leading-relaxed text-text-secondary">{cafe.story}</p>
 
-      <h2 className="mt-12 text-sm uppercase tracking-widest text-text-secondary">Lesson</h2>
-      <p className="mt-4 text-lg italic text-text">{cafe.lesson}</p>
-    </section>
+      <div className="relative mt-14 border-l-2 border-accent/30 pl-6">
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -left-2 -top-6 select-none text-6xl font-semibold leading-none text-accent/15"
+        >
+          &ldquo;
+        </span>
+        <p className="text-xl italic leading-snug text-text">{cafe.lesson}</p>
+      </div>
+    </motion.section>
   );
 }

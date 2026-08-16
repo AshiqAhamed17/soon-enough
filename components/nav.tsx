@@ -20,24 +20,37 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-bg/90 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-medium tracking-tight text-text">
+    <header className="sticky top-0 z-50 border-b border-border bg-bg/95 backdrop-blur-sm">
+      <div className="mx-auto hidden max-w-6xl items-center justify-between px-6 py-2 font-mono text-[10px] uppercase tracking-[0.25em] text-text-secondary/70 md:flex">
+        <span>A Personal Archive</span>
+        <span>Vol. 01 — Ongoing</span>
+      </div>
+
+      <div className="mx-auto flex max-w-6xl items-center justify-between border-t border-border/70 px-6 py-5 md:border-t-0">
+        <Link
+          href="/"
+          className="text-xl font-semibold tracking-tight text-text transition-colors hover:text-accent"
+        >
           Soon Enough
         </Link>
 
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-7 md:flex">
           {NAV_LINKS.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm transition-colors ${
+                className={`group relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
                   active ? "text-accent" : "text-text-secondary hover:text-text"
                 }`}
               >
                 {link.label}
+                <span
+                  className={`absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 ${
+                    active ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </Link>
             );
           })}
@@ -54,13 +67,13 @@ export function Nav() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-4 border-t border-border px-6 py-6 md:hidden">
+        <nav className="flex flex-col gap-5 border-t border-border px-6 py-6 md:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-sm text-text-secondary hover:text-text"
+              className="font-mono text-xs uppercase tracking-[0.15em] text-text-secondary hover:text-text"
             >
               {link.label}
             </Link>

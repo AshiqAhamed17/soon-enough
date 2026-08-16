@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #faf8f4;
-  --color-card: #ffffff;
-  --color-text: #1c1917;
-  --color-text-secondary: #78716c;
-  --color-accent: #8b6f52;
-  --color-border: #e7e2da;
+  --color-bg: #f6f1e7;
+  --color-card: #fffcf6;
+  --color-text: #201b15;
+  --color-text-secondary: #6e6255;
+  --color-accent: #a15c2e;
+  --color-accent-deep: #5a3a22;
+  --color-border: #e4d9c5;
+  --shadow-warm: 58 38 20;
 }
 
 @theme inline {
@@ -15,6 +17,7 @@
   --color-text: var(--color-text);
   --color-text-secondary: var(--color-text-secondary);
   --color-accent: var(--color-accent);
+  --color-accent-deep: var(--color-accent-deep);
   --color-border: var(--color-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -23,4 +26,47 @@
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgb(32 27 21 / 4%) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+}
+
+/* The photo-mount: every photograph in the site sits in a paper mount with a
+   slight physical tilt, like something actually pressed into an album. */
+.photo-mount {
+  background-color: var(--color-card);
+  box-shadow:
+    0 1px 2px rgb(var(--shadow-warm) / 8%),
+    0 24px 48px -20px rgb(var(--shadow-warm) / 28%);
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.photo-mount:hover {
+  transform: rotate(0deg) translateY(-4px) scale(1.01);
+  box-shadow:
+    0 1px 2px rgb(var(--shadow-warm) / 10%),
+    0 32px 64px -20px rgb(var(--shadow-warm) / 36%);
+}
+
+.mount-tilt-1 {
+  transform: rotate(-1.4deg);
+}
+.mount-tilt-2 {
+  transform: rotate(1deg);
+}
+.mount-tilt-3 {
+  transform: rotate(-0.6deg);
+}
+.mount-tilt-4 {
+  transform: rotate(1.6deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-mount,
+  .photo-mount:hover {
+    transition: none;
+  }
 }

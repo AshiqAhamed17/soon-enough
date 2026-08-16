@@ -1,17 +1,38 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import type { Cafe } from "@/types/cafe";
+
+const TILTS = ["mount-tilt-2", "mount-tilt-4", "mount-tilt-1", "mount-tilt-3"];
 
 export function CafeGallery({ cafe }: { cafe: Cafe }) {
   if (cafe.gallery.length === 0) return null;
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-sm uppercase tracking-widest text-text-secondary">Gallery</h2>
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <p className="font-mono text-xs uppercase tracking-[0.3em] text-text-secondary/70">
+        Gallery
+      </p>
+      <div className="mt-8 grid gap-10 sm:grid-cols-2">
         {cafe.gallery.map((src, index) => (
-          <div key={src} className="relative h-72 w-full overflow-hidden rounded-2xl">
-            <Image src={src} alt={`${cafe.name} — photo ${index + 1}`} fill className="object-cover" />
-          </div>
+          <motion.div
+            key={src}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+            className={`photo-mount rounded-sm p-3 ${TILTS[index % TILTS.length]}`}
+          >
+            <div className="relative h-72 w-full overflow-hidden">
+              <Image
+                src={src}
+                alt={`${cafe.name} — photo ${index + 1}`}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>

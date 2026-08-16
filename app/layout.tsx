@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { MotionConfig } from "framer-motion";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import "./globals.css";
@@ -21,9 +22,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-bg text-text antialiased`}
       >
-        <Nav />
-        <main>{children}</main>
-        <Footer />
+        <MotionConfig reducedMotion="user">
+          <Nav />
+          <main>{children}</main>
+          <Footer />
+        </MotionConfig>
       </body>
     </html>
   );
