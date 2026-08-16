@@ -1,0 +1,149 @@
+import type { Place } from "@/types/place";
+
+export const places: Place[] = [
+  {
+    slug: "strand-book-store-nyc",
+    name: "The Strand Book Store",
+    city: "New York",
+    country: "United States",
+    category: "Bookstore",
+    heroImage: "/images/places/strand-book-store-nyc/hero.jpg",
+    gallery: [
+      "/images/places/strand-book-store-nyc/gallery-1.jpg",
+      "/images/places/strand-book-store-nyc/gallery-2.jpg",
+    ],
+    location: "Broadway, New York",
+    visitDate: "2024-05-02",
+    detail: "A used copy of a book I'd been looking for, with someone else's handwriting in the margins",
+    companions: "Alone, on purpose, with nowhere to be for three hours",
+    music: "The particular hush of a room full of people not talking",
+    weather: "Grey outside, warm and dusty-smelling inside",
+    mood: "Unhurried, a little overwhelmed by choice",
+    story:
+      "I went in looking for one specific book and left ninety minutes later having found six others I didn't know I wanted. The stranger's handwriting in the margins of one felt like getting a secondhand thought for free.",
+    lesson: "The best finds are the ones you weren't looking for.",
+    whyItMatters:
+      "It's the place that reminded me browsing is its own kind of pleasure, not just a means to an end.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "I stopped buying books online when I could just go looking instead.",
+    },
+  },
+  {
+    slug: "tokyo-national-museum",
+    name: "Tokyo National Museum",
+    city: "Tokyo",
+    country: "Japan",
+    category: "Museum",
+    heroImage: "/images/places/tokyo-national-museum/hero.jpg",
+    gallery: [
+      "/images/places/tokyo-national-museum/gallery-1.jpg",
+      "/images/places/tokyo-national-museum/gallery-2.jpg",
+    ],
+    location: "Ueno Park, Tokyo",
+    visitDate: "2024-11-05",
+    detail: "A thousand-year-old sword displayed under glass so clean it looked untouched by time",
+    companions: "A close friend from university, mid-Japan trip",
+    music: "Near silence, footsteps on polished floors, hushed captions being read aloud",
+    weather: "Crisp autumn morning, the park outside full of falling leaves",
+    mood: "Small, in the good way — the way old things make you feel",
+    story:
+      "We'd planned an hour and stayed for four. Somewhere around the second floor we stopped talking to each other entirely and just moved room to room in parallel, occasionally waving the other one over.",
+    lesson: "Some places are worth losing track of time in.",
+    whyItMatters:
+      "It's the first museum that made me actually understand a country's history instead of just walking past it.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "I started reading up on a city's history before visiting, not after.",
+    },
+  },
+  {
+    slug: "preikestolen-norway",
+    name: "Preikestolen",
+    city: "Ryfylke",
+    country: "Norway",
+    category: "Viewpoint",
+    heroImage: "/images/places/preikestolen-norway/hero.jpg",
+    gallery: [
+      "/images/places/preikestolen-norway/gallery-1.jpg",
+      "/images/places/preikestolen-norway/gallery-2.jpg",
+    ],
+    location: "Lysefjorden, Norway",
+    visitDate: "2025-07-14",
+    detail: "The exact moment the fjord opens up beneath you after four hours of forest and rock",
+    companions: "Two friends, all of us underprepared for how hard the hike actually was",
+    music: "Wind, nothing else, for the first time in a long time",
+    weather: "Clear and cold at the top, sweat-through-your-jacket warm on the way up",
+    mood: "Legs shaking, completely silent, genuinely small",
+    story:
+      "Nobody said anything for a full minute after we reached the edge. We just stood there. Someone eventually made a joke to break the silence, and it took a while before anyone laughed.",
+    lesson: "Some views earn the silence before you can even talk about them.",
+    whyItMatters:
+      "It's the hike that reset what I thought 'worth it' meant.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "I started saying yes to hikes I would have talked myself out of before.",
+    },
+  },
+  {
+    slug: "changi-airport-singapore",
+    name: "Changi Airport",
+    city: "Singapore",
+    country: "Singapore",
+    category: "Airport",
+    heroImage: "/images/places/changi-airport-singapore/hero.jpg",
+    gallery: [
+      "/images/places/changi-airport-singapore/gallery-1.jpg",
+      "/images/places/changi-airport-singapore/gallery-2.jpg",
+    ],
+    location: "Changi, Singapore",
+    visitDate: "2024-08-20",
+    detail: "A seven-hour layover that turned into the best part of the entire trip",
+    companions: "Alone, exhausted, expecting nothing from a layover",
+    music: "Announcements, the low hum of a thousand people passing through",
+    weather: "Perpetually air-conditioned, unrelated to whatever was happening outside",
+    mood: "Surprised, then delighted, then reluctant to board my connecting flight",
+    story:
+      "I'd budgeted the layover as dead time to survive. Instead I found a garden inside an airport and lost two hours I didn't know I had to spend.",
+    lesson: "Dead time isn't dead if you actually look up from your phone.",
+    whyItMatters:
+      "It's the layover that changed how I plan connections — I look for the extra hour now instead of avoiding it.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "I stopped booking the tightest possible connections.",
+    },
+  },
+  {
+    slug: "lombard-street-sf",
+    name: "Lombard Street",
+    city: "San Francisco",
+    country: "United States",
+    category: "Road",
+    heroImage: "/images/places/lombard-street-sf/hero.jpg",
+    gallery: [
+      "/images/places/lombard-street-sf/gallery-1.jpg",
+      "/images/places/lombard-street-sf/gallery-2.jpg",
+    ],
+    location: "Russian Hill, San Francisco",
+    visitDate: "2023-10-08",
+    detail: "Walking down instead of driving, past everyone's tour buses, at the one hour tourists hadn't found yet",
+    companions: "My partner, up before sunrise for no good reason except curiosity",
+    music: "A street sweeper somewhere in the distance, otherwise nothing",
+    weather: "Cool morning fog still sitting in the switchbacks",
+    mood: "Smug, a little bit, for having the street to ourselves",
+    story:
+      "Everyone told us to drive it. We walked it instead, at 6am, before the buses arrived, and had the crookedest street in the world entirely to ourselves for about twenty minutes.",
+    lesson: "The tourist thing and the good version of the tourist thing are rarely the same hour.",
+    whyItMatters:
+      "It's a two-minute street that taught me timing matters more than the destination itself.",
+    futureMe: {
+      wouldReturn: true,
+      wouldRecommend: true,
+      whatChanged: "I started checking sunrise times before checking opening hours.",
+    },
+  },
+];

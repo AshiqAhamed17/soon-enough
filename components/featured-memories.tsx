@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { cafes } from "@/data/cafes";
 import { restaurants } from "@/data/restaurants";
+import { places } from "@/data/places";
 
 const TILTS = ["mount-tilt-1", "mount-tilt-2", "mount-tilt-3", "mount-tilt-4"];
 
@@ -62,6 +63,14 @@ export function FeaturedMemories() {
       country: restaurant.country,
       heroImage: restaurant.heroImage,
       visitDate: restaurant.visitDate,
+    })),
+    ...places.map((place) => ({
+      href: `/places/${place.slug}`,
+      name: place.name,
+      city: place.city,
+      country: place.country,
+      heroImage: place.heroImage,
+      visitDate: place.visitDate,
     })),
   ];
 
