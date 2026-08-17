@@ -49,6 +49,7 @@ export function GalleryGrid({ photos }: { photos: Photo[] }) {
                 src={photo.src}
                 alt={photo.name}
                 fill
+                sizes="(min-width: 640px) 33vw, 50vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -111,7 +112,13 @@ export function GalleryGrid({ photos }: { photos: Photo[] }) {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative h-[70vh] w-[85vw] max-w-3xl">
-                <Image src={active.src} alt={active.name} fill className="object-contain" />
+                <Image
+                  src={active.src}
+                  alt={active.name}
+                  fill
+                  sizes="85vw"
+                  className="object-contain"
+                />
               </div>
               <Link
                 href={active.href}

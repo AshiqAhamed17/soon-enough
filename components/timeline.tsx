@@ -43,6 +43,7 @@ export function Timeline({ groups }: { groups: Array<{ year: string; memories: M
                       src={memory.heroImage}
                       alt={memory.name}
                       fill
+                      sizes="80px"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>

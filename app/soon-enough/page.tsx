@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { soonEnough } from "@/data/soon-enough";
 import { SoonEnoughCard } from "@/components/soon-enough-card";
+
+export const metadata: Metadata = {
+  description: "The places I'll eventually find myself in.",
+};
 
 export default function SoonEnoughPage() {
   return (

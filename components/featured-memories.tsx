@@ -8,10 +8,12 @@ function MemoryCard({
   memory,
   tilt,
   imageHeight,
+  sizes,
 }: {
   memory: Memory;
   tilt: string;
   imageHeight: string;
+  sizes: string;
 }) {
   return (
     <Link href={memory.href} className="group block">
@@ -21,6 +23,7 @@ function MemoryCard({
             src={memory.heroImage}
             alt={memory.name}
             fill
+            sizes={sizes}
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
@@ -51,7 +54,12 @@ export function FeaturedMemories() {
       {lead && (
         <div className="mt-12 grid gap-10 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-7">
-            <MemoryCard memory={lead} tilt="mount-tilt-1" imageHeight="h-80 md:h-[26rem]" />
+            <MemoryCard
+              memory={lead}
+              tilt="mount-tilt-1"
+              imageHeight="h-80 md:h-[26rem]"
+              sizes="(min-width: 768px) 58vw, 100vw"
+            />
           </div>
           <div className="flex flex-col gap-10 md:col-span-5">
             {rest.map((memory, i) => (
@@ -60,6 +68,7 @@ export function FeaturedMemories() {
                 memory={memory}
                 tilt={TILTS[(i + 1) % TILTS.length]}
                 imageHeight="h-48"
+                sizes="(min-width: 768px) 42vw, 100vw"
               />
             ))}
           </div>

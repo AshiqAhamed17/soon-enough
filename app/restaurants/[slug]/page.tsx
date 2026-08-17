@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { restaurants } from "@/data/restaurants";
 import { RestaurantHero } from "@/components/restaurant-hero";
@@ -8,6 +9,21 @@ import { RestaurantFutureMe } from "@/components/restaurant-future-me";
 
 export function generateStaticParams() {
   return restaurants.map((restaurant) => ({ slug: restaurant.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const restaurant = restaurants.find((r) => r.slug === slug);
+  if (!restaurant) return {};
+
+  return {
+    title: restaurant.name,
+    description: restaurant.whyItMatters,
+  };
 }
 
 export default async function RestaurantPage({

@@ -13,6 +13,7 @@ export function CafeCard({ cafe, tiltIndex = 0 }: { cafe: Cafe; tiltIndex?: numb
             src={cafe.heroImage}
             alt={cafe.name}
             fill
+            sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>

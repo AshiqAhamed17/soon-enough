@@ -20,6 +20,7 @@ export function Hero() {
           alt="A quiet street somewhere worth remembering"
           fill
           preload
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30" />

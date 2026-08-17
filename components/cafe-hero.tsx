@@ -7,7 +7,14 @@ import type { Cafe } from "@/types/cafe";
 export function CafeHero({ cafe }: { cafe: Cafe }) {
   return (
     <div className="relative h-[65vh] w-full overflow-hidden">
-      <Image src={cafe.heroImage} alt={cafe.name} fill preload className="object-cover" />
+      <Image
+        src={cafe.heroImage}
+        alt={cafe.name}
+        fill
+        preload
+        sizes="100vw"
+        className="object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/10" />
       <div className="absolute bottom-0 left-0 px-6 py-12 md:px-14 md:py-16">
         <motion.p

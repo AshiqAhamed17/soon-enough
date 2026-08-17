@@ -13,6 +13,7 @@ export function PlaceCard({ place, tiltIndex = 0 }: { place: Place; tiltIndex?: 
             src={place.heroImage}
             alt={place.name}
             fill
+            sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <span className="absolute left-3 top-3 rounded-full bg-bg/90 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-text-secondary backdrop-blur-sm">

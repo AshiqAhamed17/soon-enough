@@ -12,6 +12,7 @@ export function RestaurantHero({ restaurant }: { restaurant: Restaurant }) {
         alt={restaurant.name}
         fill
         preload
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/10" />

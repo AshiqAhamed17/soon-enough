@@ -25,6 +25,7 @@ export function SoonEnoughCard({
           src={destination.heroImage}
           alt={destination.name}
           fill
+          sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover"
         />
         <span className="absolute left-3 top-3 rounded-full bg-bg/90 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-accent backdrop-blur-sm">

@@ -29,6 +29,7 @@ export function CafeGallery({ cafe }: { cafe: Cafe }) {
                 src={src}
                 alt={`${cafe.name} — photo ${index + 1}`}
                 fill
+                sizes="(min-width: 640px) 50vw, 100vw"
                 className="object-cover"
               />
             </div>
