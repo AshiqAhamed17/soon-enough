@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { restaurants } from "@/data/restaurants";
 import { RestaurantCard } from "@/components/restaurant-card";
+import { QuoteBanner } from "@/components/quote-banner";
+
+export const metadata: Metadata = {
+  title: "Restaurants",
+  description:
+    "Not food reviews. Experiences, celebrations, small moments — one for every table that became part of mine.",
+};
 
 export default function RestaurantsPage() {
   return (
@@ -17,6 +25,7 @@ export default function RestaurantsPage() {
           <RestaurantCard key={restaurant.slug} restaurant={restaurant} tiltIndex={i} />
         ))}
       </div>
+      <QuoteBanner index={1} />
     </div>
   );
 }

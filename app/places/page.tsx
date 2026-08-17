@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { places } from "@/data/places";
 import { PlaceCard } from "@/components/place-card";
+import { QuoteBanner } from "@/components/quote-banner";
+
+export const metadata: Metadata = {
+  title: "Places",
+  description:
+    "Not everything is food. Cities, viewpoints, museums, and the odd airport — anywhere that became memorable.",
+};
 
 export default function PlacesPage() {
   return (
@@ -17,6 +25,7 @@ export default function PlacesPage() {
           <PlaceCard key={place.slug} place={place} tiltIndex={i} />
         ))}
       </div>
+      <QuoteBanner index={2} />
     </div>
   );
 }

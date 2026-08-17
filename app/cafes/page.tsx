@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { cafes } from "@/data/cafes";
 import { CafeCard } from "@/components/cafe-card";
+import { QuoteBanner } from "@/components/quote-banner";
+
+export const metadata: Metadata = {
+  title: "Cafés",
+  description: "Not reviews. Stories — one for every café that became part of mine.",
+};
 
 export default function CafesPage() {
   return (
@@ -16,6 +23,7 @@ export default function CafesPage() {
           <CafeCard key={cafe.slug} cafe={cafe} tiltIndex={i} />
         ))}
       </div>
+      <QuoteBanner index={3} />
     </div>
   );
 }

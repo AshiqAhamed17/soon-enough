@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { getAllPhotos } from "@/lib/memories";
 import { GalleryGrid } from "@/components/gallery-grid";
+import { QuoteBanner } from "@/components/quote-banner";
+
+export const metadata: Metadata = {
+  title: "Gallery",
+  description: "Every photo, in one place. Click through, or use the arrow keys.",
+};
 
 export default function GalleryPage() {
   const photos = getAllPhotos();
@@ -16,6 +23,7 @@ export default function GalleryPage() {
       <div className="mt-12">
         <GalleryGrid photos={photos} />
       </div>
+      <QuoteBanner index={4} />
     </div>
   );
 }
