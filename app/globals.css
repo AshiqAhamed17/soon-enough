@@ -11,6 +11,19 @@
   --shadow-warm: 58 38 20;
 }
 
+/* Dark mode: a premium hardcover book, not an inverted light theme —
+   warm near-black instead of blue-black, cream instead of pure white. */
+[data-theme="dark"] {
+  --color-bg: #17130f;
+  --color-card: #221c15;
+  --color-text: #f4ead9;
+  --color-text-secondary: #a89986;
+  --color-accent: #d99a63;
+  --color-accent-deep: #f2c095;
+  --color-border: #3a3025;
+  --shadow-warm: 0 0 0;
+}
+
 @theme inline {
   --color-bg: var(--color-bg);
   --color-card: var(--color-card);
@@ -32,6 +45,15 @@ body {
     transparent 0
   );
   background-size: 22px 22px;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+[data-theme="dark"] body {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgb(244 234 217 / 5%) 1px,
+    transparent 0
+  );
 }
 
 /* The photo-mount: every photograph in the site sits in a paper mount with a
@@ -49,6 +71,19 @@ body {
   box-shadow:
     0 1px 2px rgb(var(--shadow-warm) / 10%),
     0 32px 64px -20px rgb(var(--shadow-warm) / 36%);
+}
+
+[data-theme="dark"] .photo-mount {
+  border: 1px solid var(--color-border);
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 40%),
+    0 24px 48px -20px rgb(0 0 0 / 60%);
+}
+
+[data-theme="dark"] .photo-mount:hover {
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 50%),
+    0 32px 64px -20px rgb(0 0 0 / 70%);
 }
 
 .mount-tilt-1 {

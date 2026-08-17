@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const NAV_LINKS = [
   { href: "/cafes", label: "Cafés" },
@@ -34,36 +35,42 @@ export function Nav() {
           Soon Enough
         </Link>
 
-        <nav className="hidden gap-7 md:flex">
-          {NAV_LINKS.map((link) => {
-            const active = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`group relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
-                  active ? "text-accent" : "text-text-secondary hover:text-text"
-                }`}
-              >
-                {link.label}
-                <span
-                  className={`absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 ${
-                    active ? "w-full" : "w-0 group-hover:w-full"
+        <div className="hidden items-center gap-7 md:flex">
+          <nav className="flex gap-7">
+            {NAV_LINKS.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`group relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
+                    active ? "text-accent" : "text-text-secondary hover:text-text"
                   }`}
-                />
-              </Link>
-            );
-          })}
-        </nav>
+                >
+                  {link.label}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 ${
+                      active ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
+          </nav>
+          <ThemeToggle />
+        </div>
 
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          className="text-text md:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            className="text-text"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {open && (
