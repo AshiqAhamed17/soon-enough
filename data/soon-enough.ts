@@ -6,6 +6,7 @@ export const soonEnough: SoonEnough[] = [
     name: "Marrakech",
     city: "Marrakech",
     country: "Morocco",
+    coordinates: { lat: 31.6258, lng: -7.9891 },
     heroImage: "/images/soon-enough/marrakech-morocco/hero.jpg",
     whyIWantToGo:
       "Every photo I've seen of the medina looks like it's hiding a hundred more streets behind it. I want to get lost somewhere on purpose.",
@@ -20,6 +21,7 @@ export const soonEnough: SoonEnough[] = [
     name: "Reykjavík",
     city: "Reykjavík",
     country: "Iceland",
+    coordinates: { lat: 64.1466, lng: -21.9426 },
     heroImage: "/images/soon-enough/reykjavik-iceland/hero.jpg",
     whyIWantToGo:
       "I want to feel small in front of something — a glacier, the northern lights, a country with more sheep than people.",
@@ -34,6 +36,7 @@ export const soonEnough: SoonEnough[] = [
     name: "Buenos Aires",
     city: "Buenos Aires",
     country: "Argentina",
+    coordinates: { lat: -34.6037, lng: -58.3816 },
     heroImage: "/images/soon-enough/buenos-aires-argentina/hero.jpg",
     whyIWantToGo:
       "A city that apparently dances tango on street corners just because it feels like it. I want some of that unselfconsciousness to rub off on me.",
@@ -48,6 +51,7 @@ export const soonEnough: SoonEnough[] = [
     name: "Cape Town",
     city: "Cape Town",
     country: "South Africa",
+    coordinates: { lat: -33.9249, lng: 18.4241 },
     heroImage: "/images/soon-enough/cape-town-south-africa/hero.jpg",
     whyIWantToGo:
       "Mountains that fall straight into an ocean. I want to stand somewhere that reminds me how big and strange the world still is.",

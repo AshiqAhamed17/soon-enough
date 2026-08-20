@@ -3,6 +3,7 @@ export interface SoonEnough {
   name: string;
   city: string;
   country: string;
+  coordinates: { lat: number; lng: number };
   heroImage: string;
   whyIWantToGo: string;
   whatIWantToExperience: string;

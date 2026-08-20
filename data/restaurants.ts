@@ -6,6 +6,7 @@ export const restaurants: Restaurant[] = [
     name: "Locanda Verde",
     city: "New York",
     country: "United States",
+    coordinates: { lat: 40.7192, lng: -74.0075 },
     heroImage: "/images/restaurants/locanda-verde-nyc/hero.jpg",
     gallery: [
       "/images/restaurants/locanda-verde-nyc/gallery-1.jpg",
@@ -34,6 +35,7 @@ export const restaurants: Restaurant[] = [
     name: "Attica",
     city: "Melbourne",
     country: "Australia",
+    coordinates: { lat: -37.8767, lng: 145.0004 },
     heroImage: "/images/restaurants/attica-melbourne/hero.jpg",
     gallery: [
       "/images/restaurants/attica-melbourne/gallery-1.jpg",
@@ -62,6 +64,7 @@ export const restaurants: Restaurant[] = [
     name: "Le Comptoir du Relais",
     city: "Paris",
     country: "France",
+    coordinates: { lat: 48.8534, lng: 2.3388 },
     heroImage: "/images/restaurants/le-comptoir-paris/hero.jpg",
     gallery: [
       "/images/restaurants/le-comptoir-paris/gallery-1.jpg",
@@ -90,6 +93,7 @@ export const restaurants: Restaurant[] = [
     name: "Din Tai Fung",
     city: "Taipei",
     country: "Taiwan",
+    coordinates: { lat: 25.0330, lng: 121.5654 },
     heroImage: "/images/restaurants/din-tai-fung-taipei/hero.jpg",
     gallery: [
       "/images/restaurants/din-tai-fung-taipei/gallery-1.jpg",

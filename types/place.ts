@@ -9,6 +9,7 @@ export interface Place {
   name: string;
   city: string;
   country: string;
+  coordinates: { lat: number; lng: number };
   category: string;
   heroImage: string;
   gallery: string[];

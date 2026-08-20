@@ -6,6 +6,7 @@ export const places: Place[] = [
     name: "The Strand Book Store",
     city: "New York",
     country: "United States",
+    coordinates: { lat: 40.7332, lng: -73.9910 },
     category: "Bookstore",
     heroImage: "/images/places/strand-book-store-nyc/hero.jpg",
     gallery: [
@@ -35,6 +36,7 @@ export const places: Place[] = [
     name: "Tokyo National Museum",
     city: "Tokyo",
     country: "Japan",
+    coordinates: { lat: 35.7188, lng: 139.7765 },
     category: "Museum",
     heroImage: "/images/places/tokyo-national-museum/hero.jpg",
     gallery: [
@@ -64,6 +66,7 @@ export const places: Place[] = [
     name: "Preikestolen",
     city: "Ryfylke",
     country: "Norway",
+    coordinates: { lat: 58.9866, lng: 6.1903 },
     category: "Viewpoint",
     heroImage: "/images/places/preikestolen-norway/hero.jpg",
     gallery: [
@@ -93,6 +96,7 @@ export const places: Place[] = [
     name: "Changi Airport",
     city: "Singapore",
     country: "Singapore",
+    coordinates: { lat: 1.3644, lng: 103.9915 },
     category: "Airport",
     heroImage: "/images/places/changi-airport-singapore/hero.jpg",
     gallery: [
@@ -122,6 +126,7 @@ export const places: Place[] = [
     name: "Lombard Street",
     city: "San Francisco",
     country: "United States",
+    coordinates: { lat: 37.8021, lng: -122.4187 },
     category: "Road",
     heroImage: "/images/places/lombard-street-sf/hero.jpg",
     gallery: [

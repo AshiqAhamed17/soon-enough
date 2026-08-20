@@ -9,6 +9,7 @@ export interface Cafe {
   name: string;
   city: string;
   country: string;
+  coordinates: { lat: number; lng: number };
   heroImage: string;
   gallery: string[];
   video?: string;

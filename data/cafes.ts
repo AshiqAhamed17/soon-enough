@@ -6,6 +6,7 @@ export const cafes: Cafe[] = [
     name: "Ozone Coffee",
     city: "London",
     country: "United Kingdom",
+    coordinates: { lat: 51.5265, lng: -0.0876 },
     heroImage: "/images/cafes/ozone-coffee-london/hero.jpg",
     gallery: [
       "/images/cafes/ozone-coffee-london/gallery-1.jpg",
@@ -34,6 +35,7 @@ export const cafes: Cafe[] = [
     name: "Kurasu",
     city: "Kyoto",
     country: "Japan",
+    coordinates: { lat: 35.0263, lng: 135.7850 },
     heroImage: "/images/cafes/kurasu-kyoto/hero.jpg",
     gallery: [
       "/images/cafes/kurasu-kyoto/gallery-1.jpg",
@@ -61,6 +63,7 @@ export const cafes: Cafe[] = [
     name: "La Caféothèque",
     city: "Paris",
     country: "France",
+    coordinates: { lat: 48.8557, lng: 2.3577 },
     heroImage: "/images/cafes/la-cafeotheque-paris/hero.jpg",
     gallery: [
       "/images/cafes/la-cafeotheque-paris/gallery-1.jpg",
@@ -88,6 +91,7 @@ export const cafes: Cafe[] = [
     name: "Toby's Estate",
     city: "Sydney",
     country: "Australia",
+    coordinates: { lat: -33.8886, lng: 151.1994 },
     heroImage: "/images/cafes/tobys-estate-sydney/hero.jpg",
     gallery: [
       "/images/cafes/tobys-estate-sydney/gallery-1.jpg",
