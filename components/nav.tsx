@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "/cafes", label: "Cafés" },
   { href: "/restaurants", label: "Restaurants" },
   { href: "/places", label: "Places" },
+  { href: "/map", label: "Map" },
   { href: "/gallery", label: "Gallery" },
   { href: "/timeline", label: "Timeline" },
   { href: "/soon-enough", label: "Soon Enough" },
