@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { restaurants } from "@/data/restaurants";
 import { RestaurantHero } from "@/components/restaurant-hero";
 import { RestaurantSnapshot } from "@/components/restaurant-snapshot";
+import { RestaurantMap } from "@/components/restaurant-map";
 import { RestaurantGallery } from "@/components/restaurant-gallery";
 import { RestaurantStory } from "@/components/restaurant-story";
 import { RestaurantFutureMe } from "@/components/restaurant-future-me";
@@ -39,6 +40,7 @@ export default async function RestaurantPage({
     <div>
       <RestaurantHero restaurant={restaurant} />
       <RestaurantSnapshot restaurant={restaurant} />
+      <RestaurantMap restaurant={restaurant} />
       <RestaurantGallery restaurant={restaurant} />
       <RestaurantStory restaurant={restaurant} />
       <RestaurantFutureMe restaurant={restaurant} />

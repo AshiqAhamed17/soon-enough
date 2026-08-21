@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { places } from "@/data/places";
 import { PlaceHero } from "@/components/place-hero";
 import { PlaceSnapshot } from "@/components/place-snapshot";
+import { PlaceDetailMap } from "@/components/place-detail-map";
 import { PlaceGallery } from "@/components/place-gallery";
 import { PlaceStory } from "@/components/place-story";
 import { PlaceFutureMe } from "@/components/place-future-me";
@@ -39,6 +40,7 @@ export default async function PlacePage({
     <div>
       <PlaceHero place={place} />
       <PlaceSnapshot place={place} />
+      <PlaceDetailMap place={place} />
       <PlaceGallery place={place} />
       <PlaceStory place={place} />
       <PlaceFutureMe place={place} />
