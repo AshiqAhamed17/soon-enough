@@ -7,11 +7,20 @@ import L from "leaflet";
 import { getFlightPath } from "@/lib/trips";
 import { buildRoutePoints, pointAtProgress } from "@/lib/flight-path-geometry";
 
+// A compass-needle-style dart that points due north (straight up) in its
+// unrotated state. This matters: `bearing` in pointAtProgress() is a
+// compass bearing (0° = north, 90° = east, clockwise), and CSS
+// `rotate(Ndeg)` is also clockwise from the element's default orientation.
+// So `rotate(bearing)` only lands correctly if "no rotation" already means
+// "pointing north" — any icon whose native artwork points some other
+// direction (e.g. lucide's Plane glyph, which points north-east) needs a
+// manual offset instead. Built as a plain shape here specifically to avoid
+// that guesswork.
 const PLANE_ICON = L.divIcon({
   className: "",
   html: `<div style="width:22px;height:22px;display:flex;align-items:center;justify-content:center;color:var(--color-accent);">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-      <path d="M2 16l20-7-3 8 3 8-20-7v-2z"/>
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+      <path d="M12 2 L19 21 L12 17 L5 21 Z"/>
     </svg>
   </div>`,
   iconSize: [22, 22],
