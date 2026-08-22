@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getAllMapMarkers } from "@/lib/memories";
-import { AllPlacesMap } from "@/components/all-places-map";
+import { FlightPathSection } from "@/components/flight-path-section";
 
 export const metadata: Metadata = {
   title: "Map",
@@ -30,7 +30,7 @@ export default function MapPage() {
       </div>
 
       <div className="mt-6">
-        <AllPlacesMap visited={visited} dreams={dreams} />
+        <FlightPathSection visited={visited} dreams={dreams} />
       </div>
     </div>
   );

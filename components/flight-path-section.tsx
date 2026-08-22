@@ -1,11 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { motion, useReducedMotion } from "framer-motion";
 import { RotateCcw } from "lucide-react";
 import { AllPlacesMap } from "@/components/all-places-map";
-import { FlightPath } from "@/components/flight-path";
 import type { MapMarkerData } from "@/components/leaflet-map";
+
+// FlightPath imports `leaflet` at module scope (touches `window` on import),
+// so it must never be reachable via a statically-evaluated server import
+// chain — same reasoning as the leaflet-map.tsx loader in place-map.tsx /
+// all-places-map.tsx.
+const FlightPath = dynamic(
+  () => import("@/components/flight-path").then((mod) => mod.FlightPath),
+  { ssr: false }
+);
 
 export function FlightPathSection({
   visited,
