@@ -105,6 +105,7 @@ export function getAllMapMarkers(): { visited: MapMarkerData[]; dreams: MapMarke
     sublabel: `${memory.city}, ${memory.country}`,
     href: memory.href,
     variant: "visited",
+    category: memory.category,
   }));
 
   const dreams: MapMarkerData[] = soonEnough.map((destination) => ({
